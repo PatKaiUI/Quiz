@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <link rel="icon" href="./img/images.jpeg" />
+
+    <title>Quiztime</title>
+  </head>
+  <body>
+    <div class="soundbar">
+      <audio
+        id="audio"
+        src="audio/Jeopardy_Theme_Song_Trap_Remix.mp3"
+        onloadedmetadata="this.currentTime= 33.24; this.play(); this.volume = 0.1;"
+        ontimeupdate="if(this.currentTime >= 95.31) { this.currentTime = 33.24; }"
+      ></audio>
+      <button onclick="toggleSound()">Sound On/Off</button>
+    </div>
+    <div id="quiz">
+      <div id="question"></div>
+      <div id="options"></div>
+      <button id="next">Nächste Frage</button>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
